@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  corepgidentitytest:
+    image: ${DOCKER_REGISTRY-}corepgidentitytest
+    build:
+      context: .
+      dockerfile: CorePGIdentityTest/Dockerfile
