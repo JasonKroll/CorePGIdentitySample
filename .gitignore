@@ -11,6 +11,8 @@ autom4te.cache/
 tarballs/
 test-results/
 
+.env
+authme-2f550-firebase-adminsdk-59t2f-b057439abb.json
 # Mac bundle stuff
 *.dmg
 *.app

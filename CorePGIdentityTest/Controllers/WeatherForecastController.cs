@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using CorePGIdentityTest.Entities;
 using CorePGIdentityTest.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CorePGIdentityTest.Controllers;
 
