@@ -36,6 +36,7 @@
     <None Remove="Migrations\" />
     <None Remove="Microsoft.AspNet.Identity.Core" />
     <None Remove="Extensions\" />
+    <None Remove="Security\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
@@ -44,5 +45,6 @@
     <Folder Include="Models\" />
     <Folder Include="Migrations\" />
     <Folder Include="Extensions\" />
+    <Folder Include="Security\" />
   </ItemGroup>
 </Project>
