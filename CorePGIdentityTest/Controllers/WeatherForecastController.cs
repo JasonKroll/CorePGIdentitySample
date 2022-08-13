@@ -24,6 +24,7 @@ public class WeatherForecastController : ControllerBase
     }
 
     [HttpGet]
+    [Authorize(Policy = Security.Policies.SubscriptionPremium)]
     public IActionResult Get()
     {
         return Ok(_apiDbContext.WeatherForecasts);

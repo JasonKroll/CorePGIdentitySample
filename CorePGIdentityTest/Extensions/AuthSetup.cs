@@ -1,5 +1,6 @@
 ﻿using System;
 using CorePGIdentityTest.Models;
+using CorePGIdentityTest.Security;
 using CorePGIdentityTest.Services;
 using FirebaseAdmin;
 using Google.Apis.Auth.OAuth2;
@@ -69,6 +70,12 @@ namespace CorePGIdentityTest.Extensions
             {
                 // User must be authenticated
                 options.FallbackPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+
+                // can read forecasts  in their orgs
+                options.AddPolicy(Policies.SubscriptionPremium, policy =>
+                    policy.Requirements.Add(new HasScopeRequirement(Permissions.Read, jwtOptions.ValidIssuer))
+                );
+
             });
 
             return services;
